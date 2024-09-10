@@ -58,32 +58,32 @@ class TournamentTest(ut.TestCase):
         t = Tournament(90, self.r1, self.r3)
         t1 = t.start()
         self.all_results.append(t1)
+        i = len(t1)
+        g = t1.get(i)
+        name = 'Ник'
+        a = g is name
+        self.assertTrue(a)
 
     def test_run2(self):
         t = Tournament(90, self.r2, self.r3)
         t1 = t.start()
         self.all_results.append(t1)
+        i = len(t1)
+        g = t1.get(i)
+        name = 'Ник'
+        a = g is name
+        self.assertTrue(a)
 
     def test_run3(self):
         t = Tournament(90, self.r1, self.r2, self.r3)
         t1 = t.start()
         self.all_results.append(t1)
-
-    def test(self):
-        print(self.all_results)
-        '''result = len(self.all_results) - 1
-        r = self.all_results[result]
-        i = len(r)
-        g = r.get(i)
+        i = len(t1)
+        g = t1.get(i)
         name = 'Ник'
         a = g is name
         self.assertTrue(a)
-        for result in self.all_results:
-            i = len(result)
-            g = result.get(i)
-            name = 'Ник'
-            a = g is name
-            self.assertTrue(a)'''
+
     @classmethod
     def tearDownClass(cls):
         for result in cls.all_results:
