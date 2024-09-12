@@ -9,7 +9,7 @@ import crud_functions
 
 products_dict = crud_functions.get_all_products()
 
-api = '7480257389:AAEGJTm77ViFzdpNbZlnAE9VB_KZM0Vmzn0'
+api = ''
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
