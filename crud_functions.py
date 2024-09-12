@@ -28,6 +28,7 @@ def get_all_products():
     products = cursor.fetchall()
     for product in products:
         products_dict.append({'title': str(product[1]), 'description': str(product[2]), 'price': str(product[3])})
+    connection.commit()
     return products_dict
 
 
